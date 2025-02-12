@@ -1,5 +1,3 @@
-Here’s a refined version that removes the misleading "close to the metal" analogy and instead emphasizes architectural freedom and design flexibility.
-
 # A Glimpse into Our Implementation
 
 In this tiny example project, we set out to build a simple yet meaningful system that embodies our philosophy: build what you understand, ship what you control. Instead of relying on heavy frameworks, we designed a lightweight custom engine using core web technologies. This approach demonstrates key ideas that provide both transparency and flexibility.
