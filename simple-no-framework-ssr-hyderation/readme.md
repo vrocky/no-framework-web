@@ -12,7 +12,9 @@ Rather than layering abstractions that obscure control, we designed a system tha
 
 ### 1. JSX and Custom Rendering
 
-Instead of using a framework’s Virtual DOM, we wrote a minimal function that translates JSX syntax into a plain JavaScript object structure. This object directly represents our intended DOM layout. The benefit? You can see exactly how components are structured—no hidden magic.
+nstead of relying on a framework’s Virtual DOM, we built a minimal function that translates JSX syntax into a plain JavaScript object structure. This object directly represents our intended DOM layout, offering complete transparency into how components are organized—no hidden magic involved.
+
+The beauty of this approach is its flexibility. While our current implementation avoids the overhead of a fully abstracted virtual DOM, it lays a clear foundation that you can easily extend. If your project evolves or you need more dynamic features, you can build upon this base to implement your own virtual DOM on demand. This gives you the best of both worlds: simplicity for straightforward cases and the power to scale up when required.
 
 ### 2. Server-Side Rendering (SSR) and Hydration
 
