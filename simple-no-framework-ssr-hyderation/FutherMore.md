@@ -1,4 +1,4 @@
-# A Hybrid, Event-Driven UI Framework with a Decoupled Renderer for SSR 
+# A Hybrid, Event-Driven UI Framework with a Decoupled Renderer with SSR 
 In modern UI development, flexibility and performance are paramount. Traditional UI systems like WPF or Android typically rely on a code-behind approach where UI behavior is tightly coupled with the controls themselves. In contrast, our framework introduces a **decoupled renderer**  that sits apart from the application logic. This separation not only enables explicit, event-driven updates but also makes server-side rendering (SSR) and incremental updates more attainable.
 
 ---
