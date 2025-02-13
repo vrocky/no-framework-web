@@ -19,7 +19,7 @@ Welcome to our framework: a **Hybrid, Event-Driven UI Framework** that employs a
 ### 🚀 Key Ingredients for Success:
 
 - **Declarative UI Composition:** Craft UIs using familiar JSX-style syntax for clarity and simplicity.
-- **Decoupled Renderer:** A standalone rendering engine that transforms virtual DOM structures into actual DOM elements.
+- **Decoupled Renderer:** A standalone rendering engine that transforms virtual DOM structures into actual DOM elements, accessible as an object for greater flexibility.
 - **Event-Driven Updates:** Components explicitly notify the renderer when state changes, empowering developers with control.
 - **SSR Support:** Render UI on the server and hydrate it seamlessly on the client side.
 - **Flexible Callbacks:** Attach event listeners wherever needed without complex data-binding magic.
@@ -131,6 +131,8 @@ The **Renderer** is the brains behind the visual output. It takes a virtual DOM 
 - **Event Management:** Attach and detach event listeners dynamically.
 - **Explicit Update:** `notifyUpdate(component, recursive)` handles UI updates on demand.
 
+Unlike React, where the renderer is abstracted away as an inaccessible black box, our framework exposes the renderer as a usable object. This gives developers complete freedom to implement custom logic and rendering behavior without adhering to rigid guidelines.
+
 *Members only:* `componentMap`, `eventMap`, `render()`, `hydrate()`, `notifyUpdate()`, `removeComponent()`
 
 ---
@@ -213,19 +215,19 @@ Your framework harmonizes several well-established UI design patterns, each cont
   - **Custom Event Implementation:** No built-in observer pattern; developers can attach events however they choose.
   - **Code-Behind Flexibility:** Mimics patterns from WinForms or Android for intuitive event logic.
 
+### 🛠️ Accessible Renderer Object
+
+- **Definition:** Unlike frameworks like React, where the renderer is hidden from the user, our framework makes it accessible as an object.
+- **Key Concepts:**
+  - **Transparent Control:** Developers can tweak the rendering process as needed.
+  - **Freedom from Guidelines:** No enforced patterns; developers can experiment with custom behaviors.
+
 ### 🧩 Modular Widgetization and Composition
 
 - **Definition:** Composable, reusable UI widgets.
 - **Key Concepts:**
   - **Separation of Concerns:** Each component handles its state and rendering.
   - **Adapter-Like Patterns:** Components adapt collections to UI structures.
-
-### 🛠️ Dependency Injection and Loose Coupling
-
-- **Definition:** Injects external services into components for modularity.
-- **Key Concepts:**
-  - **Service Locator:** Lightweight dependency management via `Renderer`.
-  - **Loose Coupling:** UI logic remains independent of business logic.
 
 ### 🔗 Comparative Inspirations
 
@@ -258,7 +260,9 @@ Your framework harmonizes several well-established UI design patterns, each cont
 
 ---
 
-## 🚀 The Road Ahead
+## 🚀 The Road Ahead: What's Next?
 
 Our hybrid framework sets the stage for powerful, flexible UI applications that blend the declarative clarity of modern frontends with the predictable performance of traditional, event-driven systems.
+
+
 
