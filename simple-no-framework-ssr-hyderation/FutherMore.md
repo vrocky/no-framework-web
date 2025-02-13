@@ -22,6 +22,48 @@ Just as in WPF, Android, or WinForms, developers can wire up any event listeners
 
 
 ---
+## Class Digram Glimpse for Quick Overview 
+```
+┌───────────────────────────────┐
+│           App                  │
+│--------------------------------│
+│ - textBox: TextBox             │
+│ - listView: ListView           │
+│ - renderer?: Renderer          │
+│--------------------------------│
+│ + onAttach(renderer)           │
+│ + handleAddClick()             │
+│ + render(): VirtualNode         │
+└───────────────────────────────┘
+              │
+              ▼
+┌────────────────────────────────┐
+│           Renderer               │
+│----------------------------------│
+│ - componentMap: Map<Component>    │
+│ - eventMap: WeakMap<Element>      │
+│----------------------------------│
+│ + render(element, container)     │
+│ + hydrate(element, container)    │
+│ + refresh(component)             │
+│ + removeComponent(component)     │
+└────────────────────────────────┘
+              │
+              ▼
+┌────────────────────────────────────┐
+│            Component               │
+│------------------------------------│
+│ + render(): VirtualNode             │
+│ + onAttach?(renderer: Renderer)     │
+└────────────────────────────────────┘
+          ▲        ▲        ▲
+          │        │        │
+┌──────────────┐ ┌───────────────┐ ┌───────────────┐
+│   TextBox    │ │   ListView    │ │    Button     │
+└──────────────┘ └───────────────┘ └───────────────┘
+
+
+```
 
 
 ## Core Components and Their Roles 
